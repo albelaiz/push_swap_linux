@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 16:29:53 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/03 15:35:35 by albelaiz         ###   ########.fr       */
+/*   Created: 2024/11/13 00:27:37 by albelaiz          #+#    #+#             */
+/*   Updated: 2025/04/04 10:56:11 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_error()
+t_list	*ft_lstlast(t_list *lst)
 {
-	ft_putstr_fd("ERROR5",2);
-	exit(1);
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

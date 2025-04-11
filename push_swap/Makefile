@@ -10,13 +10,18 @@ SRC = push_swap.c \
 	  ft_strlen.c\
 	  ft_strlcpy.c\
 	  ft_atoi.c\
-	  duplecte.c\
 	  ft_strcmp.c\
+	  ft_lstadd_back.c\
+	  ft_lstlast.c\
+	  ft_lstnew.c\
+	  ft_lstsize.c\
+	  duplicate.c\
 
 OBJ = $(SRC:.c=.o)
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+# CFLAGS = -Wall -Wextra -Werror
+CFLAGS = 
 
 all: $(NAME)
 

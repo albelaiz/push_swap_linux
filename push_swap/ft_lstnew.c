@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 16:29:53 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/03 15:35:35 by albelaiz         ###   ########.fr       */
+/*   Created: 2024/11/13 00:27:59 by albelaiz          #+#    #+#             */
+/*   Updated: 2025/04/04 11:44:09 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_error()
+t_list	*ft_lstnew(int con)
 {
-	ft_putstr_fd("ERROR5",2);
-	exit(1);
+	t_list	*tmp;
+
+	tmp = malloc(sizeof(t_list));
+	if (!tmp)
+		return (NULL);
+	tmp->content = con;
+	tmp->next = NULL;
+	return (tmp);
 }

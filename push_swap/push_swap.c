@@ -3,20 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yup <yup@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 22:09:48 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/03/28 01:58:48 by yup              ###   ########.fr       */
+/*   Updated: 2025/04/11 18:20:55 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
+	int		i;
+	t_list	**a;
+
+	i = 1;
 	if (ac < 2)
-	    return (0);
-	if (!duplecte(args(av[1])))
-		ft_error();
-	
+		return (0);
+	a = NULL;
+	while (av[i])
+	{
+		args(av[i], a);
+		i++;
+	}
 }
