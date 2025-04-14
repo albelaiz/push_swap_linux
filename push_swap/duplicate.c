@@ -6,29 +6,24 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 17:58:27 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/11 18:15:26 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/14 12:01:19 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int duplicet(int nb, int size)
+int duplicet(t_list **a, int num)
 {
-    long tmp;
-    int i = 0;
-    int j;
-    while (i < size)
+    t_list *tmp;
+
+    if (!a || !*a)
+        return (0);
+    tmp = *a;
+    while (tmp)
     {
-        tmp = nb;
-        j = 0;
-        while (j < i)
-        {
-              printf("ana hna\n");
-            if (nb == tmp)
-				return(ft_error(),0);
-            j++;
-        }
-        i++;
+        if (tmp->content == num)
+            return (1);
+        tmp = tmp->next;
     }
-    return (1);
+    return (0);
 }

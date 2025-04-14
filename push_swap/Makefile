@@ -20,8 +20,7 @@ SRC = push_swap.c \
 OBJ = $(SRC:.c=.o)
 
 CC = cc
-# CFLAGS = -Wall -Wextra -Werror
-CFLAGS = 
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 

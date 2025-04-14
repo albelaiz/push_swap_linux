@@ -6,43 +6,43 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 22:09:52 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/11 18:16:50 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/14 11:35:19 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <unistd.h>
 # include <fcntl.h>
 # include <limits.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
-    int val;
-    int			content;
+	int				val;
+	int				content;
 	struct s_list	*next;
-    long number;
-    
-} t_list;
+	long			number;
 
-void ft_error();
-void ft_ft(char *av);
-int ft_strcmp(char *s1,char *s2);
-int	ft_isdigit(int c);
-t_list	*args(char *str , t_list **a);
-int	ft_isalpha(int c);
-int duplicet(int nb, int size);
-void valid_number(char *str);
-long ft_atoi(const char *str);
-int skip_spece(int i , char *str);
-size_t	ft_strlen(const char *str);
-void	ft_putstr_fd(char *str, int fd);
-char	**ft_split(char const *s, char c);
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-t_list	*ft_lstnew(int con);
-t_list	*ft_lstlast(t_list *lst);
+}					t_list;
+
+void			ft_error(void);
+void			ft_ft(char *av);
+int				ft_isdigit(int c);
+int				ft_isalpha(int c);
+t_list			*ft_lstnew(int con);
+void			valid_number(char *str);
+t_list			*ft_lstlast(t_list *lst);
+long			ft_atoi(const char *str);
+size_t			ft_strlen(const char *str);
+int				skip_spece(int i, char *str);
+void			args(char *str, t_list **a);
+int				ft_strcmp(char *s1, char *s2);
+int				duplicet(t_list **a, int size);
+void			ft_putstr_fd(char *str, int fd);
+char			**ft_split(char const *s, char c);
+void			ft_lstadd_back(t_list **lst, t_list *new);
+size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 #endif
