@@ -22,7 +22,9 @@ SRC = push_swap.c \
 	  mouve1.c\
 	  ft_max_len.c\
 	  ft_min_len.c\
-	  ft_mintest_len.c\
+	  test.c\
+	  sort_big.c\
+	  is_sorted.c\
 
 OBJ = $(SRC:.c=.o)
 CC = cc

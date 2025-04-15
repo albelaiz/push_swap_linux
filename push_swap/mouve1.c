@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 00:05:12 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/15 21:39:49 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 00:23:42 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,16 @@ void pb(t_list **a, t_list **b)
     write(1, "pb\n", 3);
 }
 
-void pa(t_list **a, t_list **b)
+
+void pa(t_list **b, t_list **a)
 {
-    t_list *tmp;
-    if (b == NULL || *b == NULL)
-        return;
-    tmp = *b;
-    *b = tmp->next;
-	tmp->next = *a;
-	a = &tmp;
+    t_list *tmp = *a;
+    *a = tmp->next;
+    tmp->next = *b;
+    *b = tmp; 
     write(1, "pa\n", 3);
 }
+
 void ra(t_list **a)
 {
 	t_list *tmp;

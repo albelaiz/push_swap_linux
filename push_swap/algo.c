@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 00:19:07 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/15 21:41:19 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/15 22:22:59 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,35 +23,6 @@ void smal_sort(t_list **a)
 		if (tmp->content > tmp1->content)
 			sa(a,0);
 }
-
-// static void helper5(t_list **a, t_list **b,int len)
-// {
-// 	t_list	*tmp;
-// 	t_list	*tmp1;
-// 	t_list	*min;
-// 	int		i;
-
-// 	min = ft_min_len(a);
-// 	tmp = *a;
-// 	tmp1 = *a;
-// 	i = 0;
-// 	while (tmp1 != min)
-// 	{
-// 		i++;
-// 		tmp1 = tmp1->next;
-// 	}
-// 	if (i <= len / 2)
-// 	{
-// 		while (*a != min)
-// 			ra(a);
-// 	}
-// 	else
-// 	{
-// 		while (*a != min)
-// 			rra(a);
-// 	}
-// 	pb(a,b);
-// }
 
 void smal_thre(t_list **a)
 {
@@ -78,7 +49,6 @@ void smal_faive(t_list **a, t_list **b)
 
 	min = ft_min_len(a);
 	i = 0;
-	printf("tet\n");
 	while (*a != min)
 	{
 		i++;
@@ -88,7 +58,6 @@ void smal_faive(t_list **a, t_list **b)
 			rra(a);
 	}
 	pb(a, b);
-	printf("tet\n");
 	sortfour(a, b);
 	pa(a, b);
 }

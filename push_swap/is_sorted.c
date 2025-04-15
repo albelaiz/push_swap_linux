@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 21:30:53 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/15 22:21:37 by albelaiz         ###   ########.fr       */
+/*   Created: 2025/04/16 00:37:09 by albelaiz          #+#    #+#             */
+/*   Updated: 2025/04/16 00:37:22 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sortfour(t_list **a, t_list **b)
+int	is_sorted(t_list **a)
 {
-	t_list	*min;
 	t_list	*tmp;
-	int		i;
 
-	min = ft_min_len(a);
-	i = 0;
 	tmp = *a;
-	while (tmp != min)
+	while (tmp -> next)
 	{
-		i++;
-		tmp = tmp->next;
+		if (tmp -> content > tmp -> next -> content)
+			return (1);
+		tmp = tmp -> next;
 	}
-	if (i <= 2)
-	{
-		while (*a != min)
-			ra(a);
-	}
-	else
-	{
-		while (*a != min)
-			rra(a);
-	}
-	pb(a, b);
-	smal_thre(a);
-	pa(a, b);
+	return (0);
 }

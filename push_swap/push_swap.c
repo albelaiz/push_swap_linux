@@ -6,19 +6,19 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 22:09:48 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/15 21:46:08 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 00:47:27 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void print_stack(const char *name, t_list *stack)
+void	print_stack(const char *name, t_list *stack)
 {
 	printf("Stack  is %s\n", name);
-	if(!stack)
+	if (!stack)
 	{
 		printf("Stack %s is empty\n", name);
-		return;
+		return ;
 	}
 	printf("Stack %s: ", name);
 	while (stack)
@@ -29,27 +29,23 @@ void print_stack(const char *name, t_list *stack)
 	printf("\n");
 }
 
-
-int	main(int ac, char **av)
+void	free_list(t_list **list)
 {
-	int		i;
-	int		j;
-	t_list	**a;
-	t_list	**b = malloc(sizeof(t_list *));
+	t_list	*tmp;
 
-	printf("ffff\n");
-	i = 1;
-	b = NULL;
-	if (ac < 2)
-		return (0);
-	a = malloc(sizeof(t_list *));
-	while (av[i])
+	while (*list)
 	{
-		args(av[i], a);
-		i++;
+		tmp = *list;
+		*list = (*list)->next;
+		free(tmp);
 	}
+}
+static void	sorting(t_list **a, t_list **b)
+{
+	int	j;
+
 	j = ft_lstsize(*a);
-	// 	print_stack("a", *a);
+	cont_index(a);
 	if (j == 2)
 		smal_sort(a);
 	else if (j == 3)
@@ -57,7 +53,27 @@ int	main(int ac, char **av)
 	else if (j == 4)
 		sortfour(a, b);
 	else if (j == 5)
-		smal_faive(a,b);
-	// cont_index(a);
+		smal_faive(a, b);
+	else if (j > 5)
+		sort_big(a, b, j);
 }
 
+int	main(int ac, char **av)
+{
+	int		i;
+	t_list	**a;
+	t_list	**b;
+
+	a = malloc(sizeof(t_list *));
+	b = malloc(sizeof(t_list *));
+	i = 1;
+	if (ac < 2)
+		return (0);
+	while (av[i])
+	{
+		args(av[i], a);
+		i++;
+	}
+	if (is_sorted(a))
+		sorting(a, b);
+}
