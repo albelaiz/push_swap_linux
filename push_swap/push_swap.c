@@ -6,33 +6,40 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 22:09:48 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/15 02:45:02 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/15 21:46:08 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_stack(t_list *stack)
+void print_stack(const char *name, t_list *stack)
 {
-	t_list	*current;
-
-	current = stack;
-	printf("Stack: ");
-	while (current != NULL)
+	printf("Stack  is %s\n", name);
+	if(!stack)
 	{
-		printf("%d ", current->content);
-		current = current->next;
+		printf("Stack %s is empty\n", name);
+		return;
+	}
+	printf("Stack %s: ", name);
+	while (stack)
+	{
+		printf("%d ", stack->content);
+		stack = stack->next;
 	}
 	printf("\n");
 }
+
 
 int	main(int ac, char **av)
 {
 	int		i;
 	int		j;
 	t_list	**a;
+	t_list	**b = malloc(sizeof(t_list *));
 
+	printf("ffff\n");
 	i = 1;
+	b = NULL;
 	if (ac < 2)
 		return (0);
 	a = malloc(sizeof(t_list *));
@@ -42,12 +49,15 @@ int	main(int ac, char **av)
 		i++;
 	}
 	j = ft_lstsize(*a);
+	// 	print_stack("a", *a);
 	if (j == 2)
 		smal_sort(a);
 	else if (j == 3)
 		smal_thre(a);
+	else if (j == 4)
+		sortfour(a, b);
 	else if (j == 5)
+		smal_faive(a,b);
 	// cont_index(a);
-		print_stack(*a);
 }
 

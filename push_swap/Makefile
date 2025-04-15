@@ -21,11 +21,12 @@ SRC = push_swap.c \
 	  mouve2.c\
 	  mouve1.c\
 	  ft_max_len.c\
+	  ft_min_len.c\
+	  ft_mintest_len.c\
 
 OBJ = $(SRC:.c=.o)
-
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g3
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 00:05:12 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/15 02:44:21 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/15 21:39:49 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,25 +26,30 @@ void rra(t_list **a)
 	lst->next = *a;
 	*a = lst;
 	tmp->next = NULL;
-	write(1, "rra\n", 4);
+	write(1,"rra\n", 4);
 }
 void pb(t_list **a, t_list **b)
 {
-	t_list *s1;
-	
-	if (!*a || a == NULL || (*a)->next == NULL)
-		return;
-	s1 = *a;
-	*a = (*a)->next;
-	s1->next = NULL;
-	if (*b == NULL)
-		*b = s1;
-	else
-	{
-		s1->next = *b;
-		*b = s1;
-	}
-	write(1, "pb\n", 3);
+    // if (a == NULL || *a == NULL)
+    //     return;
+    
+    t_list *tmp = *a;
+    *a = tmp->next;
+    tmp->next = *b;
+    *b = tmp; 
+    write(1, "pb\n", 3);
+}
+
+void pa(t_list **a, t_list **b)
+{
+    t_list *tmp;
+    if (b == NULL || *b == NULL)
+        return;
+    tmp = *b;
+    *b = tmp->next;
+	tmp->next = *a;
+	a = &tmp;
+    write(1, "pa\n", 3);
 }
 void ra(t_list **a)
 {
