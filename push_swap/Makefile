@@ -16,6 +16,11 @@ SRC = push_swap.c \
 	  ft_lstnew.c\
 	  ft_lstsize.c\
 	  duplicate.c\
+	  cont_index.c\
+	  algo.c\
+	  mouve2.c\
+	  mouve1.c\
+	  ft_max_len.c\
 
 OBJ = $(SRC:.c=.o)
 

@@ -1,5 +1,5 @@
 # push_swap
 
-1 : eroor in int max and int min
-2 : duplicate
-3 : algo
+j = 5
+1 : jib asra 3adad f stak o rotit and oush to b
+2 : call small_thre and push b to a
