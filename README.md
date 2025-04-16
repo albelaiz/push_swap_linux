@@ -79,9 +79,14 @@ KO if not
 Error on invalid input
 
 📚 Resources
+
 Books
+
 Algorithms, 4th Edition
+
 Author: [albelaiz]
+
 School: 42 [1337med]
+
 Year: 2025
 
