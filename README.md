@@ -1,4 +1,3 @@
-<div align="center">
    
 # 42 Push_Swap
 
