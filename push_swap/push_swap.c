@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 22:09:48 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/16 02:19:42 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 13:01:03 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	free_list(t_list **list)
 		*list = (*list)->next;
 		free(tmp);
 	}
+	free(list);
 }
 static void	sorting(t_list **a, t_list **b)
 {
@@ -52,7 +53,7 @@ int	main(int ac, char **av)
 	t_list	**a;
 	t_list	**b;
 
-	// atexit(ft_ft);
+	atexit(ft_ft);
 	if (ac < 2)
 		return (0);
 	a = malloc(sizeof(t_list *));
@@ -65,4 +66,6 @@ int	main(int ac, char **av)
 	}
 	if (is_sorted(a))
 		sorting(a, b);
+	free_list(a);
+	free_list(b);
 }
