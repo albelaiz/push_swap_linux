@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 00:08:10 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/15 23:13:22 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 01:57:33 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ void	rrb(t_list **b)
 
 	if (!b || !(*b) || !(*b)->next)
 		return ;
-
 	last = *b;
 	while (last->next->next)
 		last = last->next;
 	before_last = last;
 	last = last->next;
-
 	before_last->next = NULL;
 	last->next = *b;
 	*b = last;

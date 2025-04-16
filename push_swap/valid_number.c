@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 15:58:52 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/16 01:24:02 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 02:13:16 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,18 @@ int	ft_valid_line(char *str)
 	}
 	return (j);
 }
+void	free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+}
 void	args(char *str, t_list **a)
 {
 	char	**tab;
@@ -60,16 +72,11 @@ void	args(char *str, t_list **a)
 		valid_number(tab[i]);
 		nb = ft_atoi(tab[i]);
 		if (nb > INT_MAX || nb < INT_MIN || ft_valid_line(tab[i]) > 11)
-			ft_error();
-            // 
+			return (free_tab(tab), ft_error());
 		if (duplicet(a, nb))
-			ft_error();
+			return (free_tab(tab), free_list(a), ft_error());
 		ft_lstadd_back(a, ft_lstnew(nb));
 		i++;
 	}
-	while (tab[i])
-	{
-		free(tab[i]);
-		i++;
-	}
+	free_tab(tab);
 }

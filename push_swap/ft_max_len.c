@@ -6,17 +6,17 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 01:34:52 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/15 16:07:40 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 01:58:29 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list *ft_max_len(t_list **a)
+t_list	*ft_max_len(t_list **a)
 {
-	t_list *tmp1;
-	t_list *tmp;
-	int max;
+	t_list	*tmp1;
+	t_list	*tmp;
+	int		max;
 
 	tmp = *a;
 	tmp1 = tmp;
@@ -30,5 +30,5 @@ t_list *ft_max_len(t_list **a)
 		}
 		tmp = tmp->next;
 	}
-	return(tmp1);
+	return (tmp1);
 }

@@ -6,13 +6,13 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 16:08:02 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/15 16:08:27 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 01:58:26 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list *ft_min_len(t_list **a)
+t_list	*ft_min_len(t_list **a)
 {
 	t_list *tmp1;
 	t_list *tmp;
@@ -30,5 +30,5 @@ t_list *ft_min_len(t_list **a)
 		}
 		tmp = tmp->next;
 	}
-	return(tmp1);
+	return (tmp1);
 }

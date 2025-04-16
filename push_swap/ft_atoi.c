@@ -6,13 +6,13 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:42:57 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/02 16:14:59 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 01:58:58 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	int			i;
 	int			g;

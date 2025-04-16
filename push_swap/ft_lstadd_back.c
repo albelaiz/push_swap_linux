@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 00:26:42 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/14 11:56:52 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 01:58:43 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
+
 	if (!lst || !new)
 		return ;
 	if (!*lst)
@@ -23,6 +24,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	}
 	tmp = ft_lstlast(*lst);
-	
 	tmp->next = new;
 }
