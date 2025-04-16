@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 22:09:52 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/16 02:13:49 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 14:22:32 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ void				cont_index(t_list **a);
 t_list				*ft_max_len(t_list **a);
 t_list				*ft_min_len(t_list **a);
 void				valid_number(char *str);
-void				free_list(t_list **list);
 int					ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
 long				ft_atoi(const char *str);
+void				free_list(t_list **list);
 size_t				ft_strlen(const char *str);
 void				pb(t_list **a, t_list **b);
 void				pa(t_list **b, t_list **a);

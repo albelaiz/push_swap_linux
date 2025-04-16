@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 22:09:48 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/16 13:01:03 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 13:41:01 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	main(int ac, char **av)
 	t_list	**a;
 	t_list	**b;
 
-	atexit(ft_ft);
+	// atexit(ft_ft);
 	if (ac < 2)
 		return (0);
 	a = malloc(sizeof(t_list *));

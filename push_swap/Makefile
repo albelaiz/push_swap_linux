@@ -35,7 +35,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.c
+%.o: %.c push_swap.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
@@ -46,4 +46,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: clean
