@@ -1,4 +1,4 @@
-<p text_align="center">
+<div align="center">
    
 # 42 Push_Swap
 
@@ -6,7 +6,7 @@ Because swap_push isn't as natural
 
 Given a set of integers, sort it using a predefined set of instructions using two stacks. The program outputs a sequence of operations (listed below) to sort the input integers.
    
-</p>
+
 
 
 
@@ -96,3 +96,7 @@ School: 42 [1337med]
 
 Year: 2025
 
+
+
+</div>
+</p>
