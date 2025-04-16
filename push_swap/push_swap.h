@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 22:09:52 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/16 00:37:53 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 01:20:04 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 void				sort_big(t_list **a, t_list **b, int len);
 int					is_sorted(t_list **a);
-
+void				free_list(t_list **list);
 void				sortfour(t_list **a, t_list **b);
 
 #endif

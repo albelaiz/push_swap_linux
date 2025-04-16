@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 22:09:48 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/16 00:47:27 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 01:16:15 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,11 @@ int	main(int ac, char **av)
 	t_list	**a;
 	t_list	**b;
 
+	if (ac < 2)
+		return (0);
 	a = malloc(sizeof(t_list *));
 	b = malloc(sizeof(t_list *));
 	i = 1;
-	if (ac < 2)
-		return (0);
 	while (av[i])
 	{
 		args(av[i], a);

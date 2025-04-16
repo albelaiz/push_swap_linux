@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 00:19:07 by albelaiz          #+#    #+#             */
-/*   Updated: 2025/04/15 22:22:59 by albelaiz         ###   ########.fr       */
+/*   Updated: 2025/04/16 01:04:54 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,7 @@ void smal_faive(t_list **a, t_list **b)
 	min = ft_min_len(a);
 	i = 0;
 	while (*a != min)
-	{
-		i++;
-		if (i <= 2)
 			ra(a);
-		else
-			rra(a);
-	}
 	pb(a, b);
 	sortfour(a, b);
 	pa(a, b);
